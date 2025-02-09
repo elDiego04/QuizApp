@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByRole(UserRole role);
 
-    Boolean findFirstByEmail(String email);
+    User findFirstByEmail(String email);
 }
 

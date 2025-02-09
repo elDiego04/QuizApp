@@ -28,8 +28,8 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public Boolean hasUserWithEmail(String email){
-        return userRepository.findFirstByEmail(email) != null;
+    public Boolean hasUserWithEmail(String email) {
+        return userRepository.findFirstByEmail(email) != null; // will return true if user exists, false if not
     }
 
     public User createUser(User user){
