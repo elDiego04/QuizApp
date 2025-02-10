@@ -1,0 +1,38 @@
+$secondary-color: #141a33;
+$primary-color: #F48023;
+$white: #ffffff;
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 57px;
+    background-color: $primary-color;
+    height: auto;
+
+    a.active {
+        background-color: $secondary-color;
+    }
+
+    a {
+        font-weight: 300;
+        font-size: 15px;
+        border-radius: 0px;
+        color: $white;
+    }
+
+    a.ant-btn {
+        &:hover {
+            color: $white;
+            background-color: $secondary-color;
+        }
+    }
+
+    img {
+        width: 180px;
+    }
+
+    .img_profile {
+        width: 25px;
+    }
+}
