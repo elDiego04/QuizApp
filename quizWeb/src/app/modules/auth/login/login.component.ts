@@ -26,4 +26,21 @@ export class LoginComponent {
       password: [null, Validators.required],
     })
   }
+
+  submitForm(){
+    this.authService.login(this.validateForm.value).subscribe(res=>{
+      this.message
+      .success(
+        `Login Success`,
+        {nzDuration:5000}
+      );
+      console.log(res);      
+    }, error=>{
+      this.message
+      .error(
+        `Bad credentials`,
+        {nzDuration: 5000}
+      );
+    })
+  }
 }
