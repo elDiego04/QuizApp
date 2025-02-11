@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
+import { AuthService } from '../auth/services/auth.service';
 
 
 
@@ -21,6 +22,7 @@ import { DemoNgZorroAntdModule } from '../../DemoNgZorroAntdModule';
     ReactiveFormsModule,
     RouterLink,
     DemoNgZorroAntdModule
-  ]
+  ],
+  providers: [AuthService]
 })
 export class SharedModule { }
