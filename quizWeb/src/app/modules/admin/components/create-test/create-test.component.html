@@ -1,7 +1,7 @@
 <div class="bg">
     <div class="parent">
         <div class="child">
-            <form nz-form [formGroup]="testForm" class="login-form">
+            <form nz-form [formGroup]="testForm" class="login-form" (ngSubmit)="submitForm()">
                 <nz-form-label [nzNoColon]="'true'">Title</nz-form-label>
                 <nz-form-item>
                     <nz-form-control nzErrorTip="This input is required!">
