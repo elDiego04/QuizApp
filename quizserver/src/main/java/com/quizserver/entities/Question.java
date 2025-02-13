@@ -1,5 +1,6 @@
 package com.quizserver.entities;
 
+import com.quizserver.dto.QuestionDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -8,7 +9,7 @@ import lombok.Data;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     private String questionText;
     private String optionA;
@@ -21,4 +22,18 @@ public class Question {
     @ManyToOne
     @JoinColumn(name = "test_id")
     private Test test;
+
+    public QuestionDTO getDTO(){
+        QuestionDTO dto = new QuestionDTO();
+
+        dto.setId(id);
+        dto.setQuestionText(questionText);
+        dto.setOptionA(optionA);
+        dto.setOptionB(optionB);
+        dto.setOptionC(optionC);
+        dto.setOptionD(optionD);
+        dto.setCorrectOption(correctOption);
+
+        return dto;
+    }
 }
