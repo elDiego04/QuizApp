@@ -14,5 +14,11 @@ export class AdminService {
   createTest(testDto): Observable<any> {
     return this.http.post(BASIC_URL + `api/test`, testDto)
   }
+  getAllTests(): Observable<any> {
+    return this.http.get(BASIC_URL + `api/test`)
+  }
+  addQuestionInTest(questionDto): Observable<any> {
+    return this.http.post(BASIC_URL + `api/test/question`, questionDto)
+  }
 }
 
