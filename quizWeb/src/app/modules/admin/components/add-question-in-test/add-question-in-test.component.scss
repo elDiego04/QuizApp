@@ -1,0 +1,34 @@
+.child{
+    padding: 50px;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nz-form-control{
+    min-width: 280px;
+}
+
+.login-form-button{
+    width: 30%;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: #001529;
+    border: none;
+}
+
+nz-divider{
+    padding-bottom: 10px;
+}
+
+.preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
