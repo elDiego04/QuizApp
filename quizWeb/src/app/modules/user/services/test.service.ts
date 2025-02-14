@@ -13,6 +13,10 @@ export class TestService {
     getAllTests(): Observable<any> {
         return this.http.get(BASIC_URL + `api/test`)
       }
+    
+    getTestQuestions(id: number): Observable<any> {
+        return this.http.get(BASIC_URL + `api/test/${id}`)
+      }  
 }
 
 
