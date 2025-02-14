@@ -6,7 +6,7 @@
                     <p><strong>Time: </strong>{{getFormattedTime(test.time)}}</p>
                     <p><strong>Description: </strong>{{test.description}}</p>
 
-                    <button nz-button nzType="primary">View Test</button>
+                    <button nz-button nzType="primary" routerLink="/admin/view-test/{{test.id}}">View Test</button>
                     <button nz-button nzType="primary" style="margin-right: 5px;"
                     routerLink="/admin/add-question/{{test.id}}">Add Question</button>
                 </nz-card>
