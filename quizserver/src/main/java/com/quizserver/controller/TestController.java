@@ -1,6 +1,7 @@
 package com.quizserver.controller;
 
 import com.quizserver.dto.QuestionDTO;
+import com.quizserver.dto.SubmitTestDTO;
 import com.quizserver.dto.TestDTO;
 import com.quizserver.service.test.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,15 @@ public class TestController {
         try {
             return new ResponseEntity<>(testService.getAllQuestionsByTest(id), HttpStatus.OK);
         } catch (Exception e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/submit-test")
+    public ResponseEntity<?> submitTest(@RequestBody SubmitTestDTO dto){
+        try {
+            return new ResponseEntity<>(testService.submitTest(dto), HttpStatus.OK);
+        } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
