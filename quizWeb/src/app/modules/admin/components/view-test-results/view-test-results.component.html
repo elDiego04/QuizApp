@@ -1,0 +1,22 @@
+<div style="padding: 20px;">
+    <nz-table #basicTable [nzData]="resultsData">
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>User Name</th>
+                <th>Total Questions</th>
+                <th>Correct Answers</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data">
+                <td>{{data.testName}}</td>
+                <td>{{data.userName}}</td>
+                <td>{{data.totalQuestions}}</td>
+                <td>{{data.correctAnswers}}</td>
+                <td>{{data.percentage}}</td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>
