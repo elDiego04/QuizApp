@@ -106,4 +106,8 @@ public class TestServiceImpl implements TestService {
 
         return testResultRepository.save(testResult).getDto();
     }
+
+    public List<TestResultDTO> getAllTestResults(){
+        return testResultRepository.findAll().stream().map(TestResult::getDto).collect(Collectors.toList());
+    }
 }
