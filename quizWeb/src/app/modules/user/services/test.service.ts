@@ -16,7 +16,11 @@ export class TestService {
     
     getTestQuestions(id: number): Observable<any> {
         return this.http.get(BASIC_URL + `api/test/${id}`)
-      }  
+      }
+      
+      submitTest(data:any): Observable<any> {
+        return this.http.post(BASIC_URL + `api/test/submit-test`, data)
+      }
 }
 
 
